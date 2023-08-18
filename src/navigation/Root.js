@@ -29,7 +29,9 @@ const RootNavigation = () => {
                     component={ItemsScreen}
                     options={{headerShown:false}}
                 />
-                <Stack.Screen name="SingleItem" component={SingleItemScreen} />
+                <Stack.Screen name="SingleItem"
+                options={({ route }) => ({ title: route.params.item.title })}
+                component={SingleItemScreen} />
 
 
             </Stack.Navigator>

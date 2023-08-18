@@ -13,9 +13,7 @@ export default function ItemsScreen({navigation}) {
 
     useEffect(() => {
         if(items.length === 0 && isLoading){
-
             axios.post('https://staging-api.manoapp.com/api/v1/users/products',null, {
-
                 headers: {
                     'Authorization': `${token}`,
                     StoreID,
